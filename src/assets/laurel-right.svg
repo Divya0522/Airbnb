@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 44" width="22" height="36" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <g transform="translate(28, 0) scale(-1, 1)">
+    <!-- Outer curving stem -->
+    <path d="M22 39 C 14 36, 6 29, 6 20 C 6 12, 10 5, 18 2" />
+    <!-- Bottom scroll/curl -->
+    <path d="M22 39 C 24 40, 26 39, 25 36 C 24 34, 21 35, 20 37" />
+    <!-- Leaf 1 (bottom outer) -->
+    <path d="M14 34 C 9 34, 4 30, 7 26 C 11 26, 15 30, 16 33" />
+    <!-- Leaf 2 (middle-low outer) -->
+    <path d="M9 25 C 4 23, 2 17, 6 15 C 10 16, 12 21, 11 24" />
+    <!-- Leaf 3 (middle-high outer) -->
+    <path d="M8 16 C 5 13, 5 7, 9 6 C 12 8, 12 13, 10 15" />
+    <!-- Leaf 4 (top outer) -->
+    <path d="M12 8 C 11 4, 13 1, 17 2 C 18 5, 16 8, 14 8" />
+  </g>
+</svg>

@@ -1,0 +1,246 @@
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #DDDDDD;
+  z-index: 10;
+  height: 80px;
+}
+
+.header-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 100%;
+  transition: padding 0.2s ease;
+}
+
+.header-logo {
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.airbnb-logo-svg {
+  display: block;
+  height: 34px;
+  fill: #FF385C;
+  width: auto;
+}
+
+.header-search-container {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-radius: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 52px;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.search-bar:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.search-bar__section {
+  padding: 0 16px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.search-bar__section--bold {
+  font-weight: 600;
+  color: #222222;
+}
+
+.search-bar__section--anywhere {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar__house-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.search-bar__section--light {
+  font-weight: 400;
+  color: #717171;
+  padding-right: 8px;
+}
+
+.search-bar__divider {
+  width: 1px;
+  height: 24px;
+  background-color: #DDDDDD;
+}
+
+.search-bar__button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #FF385C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-right: 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar__button:hover {
+  background-color: #E31C5F;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: 1;
+}
+
+.header-right__host {
+  padding: 10px 14px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-right__host:hover {
+  background-color: #F7F7F7;
+}
+
+.header-right__globe {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #EBEBEB;
+  border: 1px solid #DDDDDD;
+  color: #222222;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-right__globe:hover {
+  background-color: #E0E0E0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Circular Menu Button (three horizontal lines) */
+.header-menu-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  background-color: #EBEBEB;
+  color: #222222;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.header-menu-btn:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  background-color: #E0E0E0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1280px) {
+  .header-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-right__host {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+  .header-container {
+    padding: 0 16px;
+  }
+  .airbnb-logo-svg {
+    height: 28px;
+  }
+  .header-right__globe {
+    display: none;
+  }
+  .search-bar__section--guests {
+    display: none;
+  }
+  .search-bar__divider:last-of-type {
+    display: none;
+  }
+  .search-bar {
+    height: 42px;
+  }
+  .search-bar__section {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .search-bar__section--anytime,
+  .search-bar__divider {
+    display: none;
+  }
+  .search-bar__section--anywhere {
+    padding-left: 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-container {
+    padding: 0 10px;
+  }
+  .airbnb-logo-svg {
+    height: 24px;
+  }
+  .search-bar__house-img {
+    height: 28px;
+  }
+}

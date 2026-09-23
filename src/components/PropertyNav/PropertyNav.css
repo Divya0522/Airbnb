@@ -1,0 +1,191 @@
+/* ============================================================
+   PROPERTY NAVIGATION BAR (STICKY SECOND NAVBAR STATE)
+   Exact specifications per user reference & infographic:
+   - Height: 64px
+   - Padding (left/right): 24px (desktop)
+   - Tabs gap: 32px
+   - Font size (tabs): 16px
+   - Font weight (tabs): 500 (medium)
+   - Active tab underline: 2px height, 24px width, #222222, rounded (border-radius: 2px)
+     Positioned close to the navlink text (NOT at the navbar bottom border)
+   - Border bottom: 1px solid #EBEBEB
+   - Right section gap: 24px
+   - Price font size: 16px (bold for price, normal for 'for 5 nights')
+   - Rating font size: 14px, color #222222 / #717171
+   - Reserve button: Height 40px, padding 0 24px, border-radius 8px, #E00B41
+   - Sticky positioning: position: sticky; top: 0; z-index: 90;
+   ============================================================ */
+
+.property-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #EBEBEB;
+  z-index: 100;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+}
+
+/* Appears smoothly and stays fixed when scrolled past hero section */
+.property-nav--sticky {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.property-nav__container {
+  max-width: 1168px; /* Matches 1120px content + 48px padding */
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Tabs list on the left */
+.property-nav__tabs {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 32px;
+}
+
+/* Individual Tab Button */
+.property-nav__tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #717171;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.15s ease;
+}
+
+.property-nav__tab:hover {
+  color: #222222;
+}
+
+.property-nav__tab--active {
+  color: #222222;
+  font-weight: 500;
+}
+
+/* Inner Tab Label Wrapper */
+.property-nav__tab-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Active tab underline: spread across the full width of the navlink text, positioned 5px directly below */
+.property-nav__tab--active .property-nav__tab-label::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #222222;
+  border-radius: 2px;
+}
+
+/* Right Summary: Price, Rating and Reserve Button */
+.property-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.property-nav__price-block {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.property-nav__price {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.property-nav__price .price-bold {
+  font-weight: 600;
+  color: #222222;
+}
+
+.property-nav__price .price-label {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.property-nav__rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  font-size: 14px;
+  color: #222222;
+  margin-top: 2px;
+}
+
+.property-nav__rating .rating-score {
+  font-weight: 600;
+  color: #222222;
+}
+
+.property-nav__rating .rating-dot {
+  color: #717171;
+  margin: 0 1px;
+}
+
+.property-nav__rating .review-link {
+  color: #717171;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Reserve Button: Height 40px, padding 0 24px, border-radius 8px, #E00B41 */
+.property-nav__reserve-btn {
+  height: 40px;
+  padding: 0 24px;
+  background-color: #E00B41;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.property-nav__reserve-btn:hover {
+  background-color: #C10836;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 860px) {
+  .property-nav {
+    display: none;
+  }
+}

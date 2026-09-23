@@ -1,0 +1,170 @@
+/* Amenities Modal Styles matching official Airbnb design */
+
+.amenities-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  animation: amenitiesFadeIn 0.2s ease-out;
+}
+
+@keyframes amenitiesFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.amenities-modal-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  animation: amenitiesSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes amenitiesSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Sticky top header with close button */
+.amenities-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 20px 24px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.amenities-modal-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  transition: background-color 0.15s ease;
+  padding: 0;
+}
+
+.amenities-modal-close-btn:hover {
+  background-color: #F7F7F7;
+}
+
+/* Modal Body */
+.amenities-modal-body {
+  padding: 0 24px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.amenities-modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  margin: 8px 0 28px 0;
+}
+
+.amenities-modal-section {
+  margin-bottom: 28px;
+}
+
+.amenities-modal-category-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 16px 0;
+  padding-bottom: 4px;
+}
+
+.amenities-modal-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenities-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.amenities-modal-row__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+}
+
+.amenities-modal-row__name {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.amenities-modal-row--unavailable {
+  color: #717171;
+}
+
+.amenities-modal-row--unavailable .amenities-modal-row__icon {
+  color: #717171;
+}
+
+.amenities-modal-row__name--unavailable {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #717171;
+  color: #717171;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .amenities-modal-overlay {
+    padding: 0;
+  }
+
+  .amenities-modal-card {
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .amenities-modal-header {
+    padding: 16px 20px;
+  }
+
+  .amenities-modal-body {
+    padding: 0 20px 24px;
+  }
+}

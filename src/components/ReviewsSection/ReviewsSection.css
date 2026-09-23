@@ -1,0 +1,513 @@
+.reviews-section-wrapper {
+  width: 100%;
+  padding: 40px 0 32px 0;
+  box-sizing: border-box;
+}
+
+/* 1. Laurel Big Score Header */
+.reviews-hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.reviews-score-laurel-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+
+.reviews-laurel-img {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.reviews-giant-score {
+  font-size: 92px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1;
+  letter-spacing: -2px;
+  font-family: inherit;
+}
+
+.reviews-guest-fav-badge {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.reviews-guest-fav-sub {
+  font-size: 16px;
+  color: #717171;
+  line-height: 1.45;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-how-it-works-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 12px;
+  padding: 2px 4px;
+  transition: opacity 0.2s ease;
+}
+
+.reviews-how-it-works-btn:hover {
+  opacity: 0.7;
+}
+
+/* 2. Rating Breakdown 7 Columns */
+.reviews-breakdown-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
+}
+
+.reviews-breakdown-col {
+  flex: 1;
+  padding: 0 18px;
+  border-right: 1px solid #DDDDDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.reviews-breakdown-col--overall {
+  padding-left: 0;
+  flex: 1.35;
+}
+
+.reviews-breakdown-col--last {
+  border-right: none;
+  padding-right: 0;
+}
+
+.breakdown-col-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.breakdown-col-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.breakdown-col-score {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.breakdown-col-icon {
+  color: #222222;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Overall rating bars */
+.overall-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.overall-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overall-bar-level {
+  font-size: 12px;
+  font-weight: 500;
+  color: #222222;
+  width: 8px;
+}
+
+.overall-bar-track {
+  flex: 1;
+  height: 4px;
+  background-color: #EBEBEB;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.overall-bar-fill {
+  height: 100%;
+  background-color: #222222;
+  border-radius: 2px;
+}
+
+/* 3. Horizontally Scrollable Topic Filter Pills with Blur/Fade Effect */
+.reviews-pills-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.reviews-pills-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  padding: 4px 0;
+  width: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.reviews-pills-scroll:active {
+  cursor: grabbing;
+}
+
+.reviews-pills-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-pills-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+.reviews-pills-fade--left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 15%, rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.reviews-pills-fade--right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 15%, rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.review-topic-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #DDDDDD;
+  border-radius: 30px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.review-topic-pill:hover {
+  border-color: #222222;
+}
+
+.review-topic-pill--active {
+  background-color: #F7F7F7;
+  border-color: #222222;
+  font-weight: 600;
+}
+
+.pill-emoji {
+  font-size: 15px;
+}
+
+.pill-label {
+  color: #222222;
+}
+
+.pill-count {
+  color: #222222;
+  font-size: 14px;
+}
+
+/* 4. 2-Column Reviews Grid */
+.reviews-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 80px;
+  row-gap: 40px;
+  margin-bottom: 36px;
+}
+
+.review-card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.review-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-author-initial {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.review-author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.25;
+}
+
+.review-author-sub {
+  font-size: 14px;
+  color: #717171;
+}
+
+.review-card-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.review-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-meta-dot {
+  color: #717171;
+}
+
+.review-date-text {
+  color: #222222;
+  font-weight: 500;
+}
+
+.review-stay-type {
+  color: #717171;
+  font-size: 14px;
+}
+
+.review-card-content {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222222;
+  margin: 0;
+}
+
+/* 5. Show All Reviews Button */
+.reviews-show-all-row {
+  margin-top: 12px;
+}
+
+.reviews-show-all-btn {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.reviews-show-all-btn:hover {
+  background-color: #F7F7F7;
+}
+
+/* All Reviews Modal */
+.reviews-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 24px;
+}
+
+.reviews-modal-window {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reviews-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.reviews-modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: -8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  transition: background-color 0.15s ease;
+}
+
+.reviews-modal-close-btn:hover {
+  background-color: #F7F7F7;
+}
+
+.reviews-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.reviews-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviews-modal-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #B0B0B0;
+  border-radius: 30px;
+  padding: 10px 18px;
+  background-color: #F7F7F7;
+}
+
+.reviews-modal-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  color: #222222;
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #717171;
+  display: flex;
+  align-items: center;
+}
+
+.reviews-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 8px;
+}
+
+.reviews-modal-item {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.reviews-modal-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .reviews-breakdown-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .reviews-breakdown-col {
+    flex: 1 1 30%;
+    border-right: none;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 12px 0;
+  }
+  .reviews-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,158 @@
+.more-stays-section {
+  width: 100%;
+  padding-bottom: 64px;
+  box-sizing: border-box;
+}
+
+.more-stays-divider {
+  margin: 0 0 44px 0;
+  border: none;
+  border-top: 1px solid #EBEBEB;
+  width: 100%;
+}
+
+.more-stays-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.more-stays-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+}
+
+.more-stays-pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination-counter {
+  font-size: 14px;
+  color: #222222;
+  font-weight: 500;
+  user-select: none;
+  margin-right: 4px;
+}
+
+.pagination-arrow-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #DDDDDD;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.pagination-arrow-btn:hover:not(:disabled) {
+  border-color: #222222;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+}
+
+.pagination-arrow-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: #EBEBEB;
+}
+
+/* 5 Card Grid */
+.more-stays-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 16px;
+  row-gap: 20px;
+}
+
+.stay-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.stay-card-image-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.stay-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.stay-card:hover .stay-card-image {
+  transform: scale(1.03);
+}
+
+.stay-card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222222;
+  margin: 10px 0 4px 0;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 40px;
+}
+
+.stay-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #222222;
+  margin-top: 2px;
+}
+
+.stay-card-price {
+  font-weight: 600;
+  color: #222222;
+}
+
+.stay-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.stay-card-rating svg {
+  margin-bottom: 1px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .more-stays-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .more-stays-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 440px) {
+  .more-stays-grid {
+    grid-template-columns: 1fr;
+  }
+}
